@@ -1,0 +1,13 @@
+base.hxml
+-main idv.rs.reiko93.lab.workflow.HaxeVsWorkflowExp
+-hl out_hlc/HaxeVsWorkflowExp/main.c
+
+# 如果不用 makefile 的話：
+# 1. 確保 bin 資料夾存在
+# 2. 使用 --cmd 讓 Haxe 翻譯完後，自動呼叫 Clang 編譯到指定目錄（例如 bin/mycli）
+# 3. 執行
+# 用 && 串起來 (不能換行喔)
+# --cmd mkdir -p bin && clang -O3 -o bin/mycli out/main.c -I out -I /opt/homebrew/include -L /opt/homebrew/lib -lhl && bin/mycli 123 456
+
+# 轉譯完後，直接呼叫 Makefile 裡的 run task
+--cmd make run_hlc NAME=HaxeVsWorkflowExp ARGS="123 456"

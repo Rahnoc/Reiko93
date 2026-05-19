@@ -1,0 +1,37 @@
+# 忽略 Haxe 內建的直譯/分析快取資料夾
+.haxe/
+
+# 忽略 C 語言編譯（GCC/Clang）過程中產生的實體物件檔案
+*.o
+*.obj
+*.a
+*.lib
+
+
+# 忽略 Haxe 轉譯出來的 C 語言暫存目錄
+out_hlc/
+# 忽略我們透過萬用 Makefile 編譯出來的 Mac 原生執行檔目錄
+bin_hlc/
+
+# 忽略 Haxe 轉譯出來的 C++ 語言暫存目錄，與一開始的原生執行檔目錄
+out_cpp/
+# 忽略 Makefile 搬移用的 C++ 原生執行檔目錄
+bin_cpp/
+
+# 忽略 Haxe 轉譯出來的 Java 語言暫存目錄
+out_java/
+# 忽略 Makefile 搬移的 Java 成品 (JAR/Class) 執行檔目錄
+bin_java/
+
+# 忽略直接產在根目錄或其他位置的虛擬機執行檔與網頁腳本
+*.hl
+*.n
+*.js
+*.js.map
+
+
+# Node.js 生態系相關資料夾 (若有使用 npm 引入前端套件)
+node_modules/
+
+# 忽略 VS Code 自己的本地歷史紀錄 (選填)
+.history/

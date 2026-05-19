@@ -1,0 +1,4 @@
+# 雖然用不到，為了讓檔案生成時能判斷套件路徑，至少要有 -cp src。 這裡為了一致，引入base.hxml。
+base.hxml
+# 清空 out 系列資料夾用
+--cmd make clean
