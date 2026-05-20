@@ -1,0 +1,13 @@
+{
+    "whitespace": {
+        "typeHintColonPolicy": "after"
+    },
+    "sameLine": {
+        "ifBody": "keep",
+        "tryBody": "keep"
+    },
+    "indentation": {
+        "character": "\t",
+        "count": 1
+    }
+}

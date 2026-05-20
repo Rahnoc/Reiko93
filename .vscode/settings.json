@@ -3,6 +3,10 @@
         ["xbuild/util_clean_out.hxml"],
         ["xbuild/Lab01_workflow_hlc.hxml"],
         ["xbuild/Lab01_workflow_cpp.hxml"],
-        ["xbuild/Lab01_workflow_interp.hxml"]
+        ["xbuild/Lab01_workflow_interp.hxml"],
+        ["xbuild/Lab02_type_interp.hxml"],
+        ["xbuild/Lab02_type_cpp.hxml"],
+        ["xbuild/Lab02_type_hlc.hxml"],
+        ["xbuild/Lab02_type_js.hxml"]
     ]
 }

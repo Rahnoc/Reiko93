@@ -6,7 +6,7 @@
 
 ### 建構說明
 
-執行時，本專案主要針對 .c ， .cpp 或是 直譯。
+執行時，本專案主要針對 .c ， .cpp ， .js 或是 直譯。
 
 *.hxml 建構檔案間，透過使用一個基底 base.hxml 來定義共用部分。
 
@@ -31,11 +31,22 @@
     -cpp out_cpp/MyExample
     --cmd make run_cpp NAME=MyExample ARGS="123 456"
     ```
+    
+- 針對 .js 輸出，Haxe 會轉譯後編譯。 Makefile 中僅叫用 node.js 啟動，與提供 CLI 參數。
+
+    ```
+    # 3. JavaScript 語言流 (MyExample_js.hxml)
+    base.hxml
+    -main <pkgPath.>MyExample
+    -js bin_js/MyExample.js
+    --cmd make run_js NAME=MyExample ARGS="123 456"
+    ```
+
 
 - 針對 直譯(intepreter)，因為 --interp 無法給 CLI 參數，所以透過 Makefile 叫用
 
     ```
-    # 3. 直譯流 (MyExample_interp.hxml)
+    # 4. 直譯流 (MyExample_interp.hxml)
     base.hxml
     --cmd make run_interp NAME=MyExample PKG_PATH="<pkgPath>" ARGS="123 456"
     ```
@@ -78,4 +89,4 @@ xbuild 子資料夾目的為將子模組的 hxml 集中。 但是基本還是會
 
     - 好處是 ws 頂層東西少。 但是新增一個主題的子專案時，都要手動去修 settings.json (ws版)。
 
-    - 懶得處理了，畢竟是要寫 Haxe 不是來搞**組態設定**。 走火入魔只會弄出**藍色貨櫃鯨魚**之類的鬼東西。
+    - 懶得處理了，畢竟是要寫 Haxe 不是來搞**組態設定**。 走火入魔只會召喚出**藍色貨櫃鯨魚**之類的鬼東西。

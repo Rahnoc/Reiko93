@@ -32,6 +32,9 @@ else
     FULL_MAIN = $(strip $(PKG_PATH)).$(NAME)
 endif
 
+# 使用 which 檢查 node 是否存在
+NODE_CHECK := $(shell which node 2>/dev/null)
+
 
 # 根據種類決定執行檔後方贅詞
 POST_HLC = _hlc
@@ -50,6 +53,11 @@ LDFLAGS = -L /opt/homebrew/lib -lhl
 BIN_CPP = bin_cpp
 OUT_SUB_CPP = out_cpp/$(NAME)
 EXE_CPP = $(NAME)$(POST_CPP)
+
+
+# 3. JS (JavaScript) 的輸出資料夾
+BIN_JS = bin_js
+FILE_JS = $(NAME).js
 
 
 # ----------------------------------------------------
@@ -73,7 +81,24 @@ run_cpp:
 
 
 # ----------------------------------------------------
-# 3. 記憶體直譯模式 (Interpreter) Task
+# 3. JavaScript (Node.js 執行模式) Task
+# ----------------------------------------------------
+# 執行使用 Node.js。
+run_js:
+ifeq ($(NODE_CHECK),)
+# 沒裝 Node.js 時執行的區塊
+	@echo "=================================================="
+	@echo "錯誤: 偵測不到 Node.js 執行環境！"
+	@echo "'brew install node' 安裝，或使用瀏覽器開啟。"
+	@echo "=================================================="
+else
+# 有裝 Node.js 時正常執行
+	node $(BIN_JS)/$(FILE_JS) $(ARGS)
+endif
+
+
+# ----------------------------------------------------
+# Y. 記憶體直譯模式 (Interpreter) Task
 # ----------------------------------------------------
 # 直譯時會依賴於 base.hxml 來取得如 src 等基本設定。
 # 需要 package 路徑。
@@ -81,9 +106,8 @@ run_interp:
 	haxe base.hxml -main $(FULL_MAIN) --run $(FULL_MAIN) $(ARGS)
 
 
-
 # ----------------------------------------------------
 # Z. make clean 清除 中繼目錄 與 執行檔輸出目錄 用。
 # ----------------------------------------------------
 clean:
-	rm -rf out_hlc out_cpp $(BIN_HLC) $(BIN_CPP)
+	rm -rf out_hlc out_cpp $(BIN_HLC) $(BIN_CPP) $(BIN_JS)
