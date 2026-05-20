@@ -39,6 +39,8 @@
     base.hxml
     -main <pkgPath.>MyExample
     -js bin_js/MyExample.js
+    # 如果有用到 Sys.println() 之類的東西。 (mac haxelib 需要裝 hxnodejs)
+    -lib hxnodejs
     --cmd make run_js NAME=MyExample ARGS="123 456"
     ```
 

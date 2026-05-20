@@ -3,7 +3,7 @@ package idv.rs.reiko93.lab.type;
 import haxe.Int32;
 
 ///
-/// NumConvExp.hx
+/// NumConv.hx
 /// Reiko93'
 ///
 /// Created by Rahnoc on 2026/05/20.
@@ -19,7 +19,7 @@ import haxe.Int32;
  * 直譯時，正好溢位變負數。
  * JS
  */
-class NumConvExp {
+class NumConv {
 	public function new() {}
 
 	public function run() {

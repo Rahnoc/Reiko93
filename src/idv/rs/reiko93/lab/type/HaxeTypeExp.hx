@@ -19,8 +19,8 @@ class HaxeTypeExp {
 		var obj = new HaxeTypeExp();
 		obj.check();
 
-		new NumConvExp().run();
-		new IntDivideExp().run();
+		new NumConv().run();
+		new IntDivide().run();
 	}
 
 	function new() {}

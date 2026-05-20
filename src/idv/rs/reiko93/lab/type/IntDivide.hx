@@ -3,7 +3,7 @@ package idv.rs.reiko93.lab.type;
 import haxe.Int32;
 
 ///
-/// IntDivideExp.hx
+/// IntDivide.hx
 /// Reiko93'
 ///
 /// Created by Rahnoc on 2026/05/20.
@@ -14,7 +14,7 @@ import haxe.Int32;
  * 不是變 2 喔，全面變成 2.5f，跟 AS3 一樣。
  * 
  */
-class IntDivideExp {
+class IntDivide {
 	public function new() {}
 
 	public function run(): Void {

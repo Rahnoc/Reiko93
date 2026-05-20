@@ -4,9 +4,15 @@
         ["xbuild/Lab01_workflow_hlc.hxml"],
         ["xbuild/Lab01_workflow_cpp.hxml"],
         ["xbuild/Lab01_workflow_interp.hxml"],
+        //
         ["xbuild/Lab02_type_interp.hxml"],
         ["xbuild/Lab02_type_cpp.hxml"],
         ["xbuild/Lab02_type_hlc.hxml"],
-        ["xbuild/Lab02_type_js.hxml"]
+        ["xbuild/Lab02_type_js.hxml"],
+        //
+        ["xbuild/Lab03_class_interp.hxml"],
+        ["xbuild/Lab03_class_js.hxml"],
+        ["xbuild/Lab03_class_hlc.hxml"],
+        ["xbuild/Lab03_class_cpp.hxml"],
     ]
 }
