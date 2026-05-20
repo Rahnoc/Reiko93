@@ -1,0 +1,8 @@
+{
+    "haxe.configurations": [
+        ["xbuild/util_clean_out.hxml"],
+        ["xbuild/Lab01_workflow_hlc.hxml"],
+        ["xbuild/Lab01_workflow_cpp.hxml"],
+        ["xbuild/Lab01_workflow_interp.hxml"]
+    ]
+}
