@@ -35,3 +35,6 @@ node_modules/
 
 # 忽略 VS Code 自己的本地歷史紀錄 (選填)
 .history/
+
+# 忽略Rs流開發資產
+iDoc/
