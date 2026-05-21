@@ -1,43 +1,43 @@
 # Reiko93' - Haxe Revisited Warm-Up Project
 
-*~ 夢迴2k6, Eclipse ASDT Flashout Ant MTASC FlashDevelop Flex AIR ~*
+*~ 夢迴2k6, `Eclipse` `ASDT` `Flashout` `Ant` `MTASC` `FlashDevelop` `Flex` `AIR` ~*
 
 -----
 
 ### 建構說明
 
-執行時，本專案主要針對 .c ， .cpp ， .js 或是 直譯。
+執行時，本專案主要針對 **.c** ， **.cpp** ， **.js** 或是 **直譯**。
 
-*.hxml 建構檔案間，透過使用一個基底 base.hxml 來定義共用部分。
+`\*.hxml` 建構檔案間，透過使用一個基底 `base.hxml` 來定義共用部分。
 
-各種case子專案，於其 *.hxml 內 引用 base.hxml 為基底。
+各種case子專案，於其 `\*.hxml` 內 引用 `base.hxml` 為基底。
 
 - 針對 .c 輸出， hlc 轉譯後，我們透過 Makefile 執行一個可參數化的編譯與連結工具。
 
-    ```
+    ```hxml
     # 1. C 語言流 (MyExample_hlc.hxml)
     base.hxml
-    -main <pkgPath.>MyExample
+    -main your.pkgPath.MyExample
     -hl out_hlc/MyExample/main.c
     --cmd make run_hlc NAME=MyExample ARGS="123 456"
     ```
 
 - 針對 .cpp 輸出，Haxe 會轉譯後編譯。 Makefile 中僅搬移檔案，與提供 CLI 參數。
 
-    ```
+    ```hxml
     # 2. C++ 語言流 (MyExample_cpp.hxml)
     base.hxml
-    -main <pkgPath.>MyExample
+    -main your.pkgPath.MyExample
     -cpp out_cpp/MyExample
     --cmd make run_cpp NAME=MyExample ARGS="123 456"
     ```
     
 - 針對 .js 輸出，Haxe 會轉譯後編譯。 Makefile 中僅叫用 node.js 啟動，與提供 CLI 參數。
 
-    ```
+    ```hxml
     # 3. JavaScript 語言流 (MyExample_js.hxml)
     base.hxml
-    -main <pkgPath.>MyExample
+    -main your.pkgPath.MyExample
     -js bin_js/MyExample.js
     # 如果有用到 Sys.println() 之類的東西。 (mac haxelib 需要裝 hxnodejs)
     -lib hxnodejs
@@ -45,50 +45,96 @@
     ```
 
 
-- 針對 直譯(intepreter)，因為 --interp 無法給 CLI 參數，所以透過 Makefile 叫用
+- 針對 直譯(intepreter)，因為 `--interp` 無法給 CLI 參數，所以透過 Makefile 叫用
 
-    ```
+    ```hxml
     # 4. 直譯流 (MyExample_interp.hxml)
     base.hxml
-    --cmd make run_interp NAME=MyExample PKG_PATH="<pkgPath>" ARGS="123 456"
+    --cmd make run_interp NAME=MyExample PKG_PATH="your.pkgPath." ARGS="123 456"
     ```
 
 -----
 
 ### 清理(中間)產物
 
-本專案編譯輸出皆已標準化至 out_*/（暫存）與 bin_*/（成品）目錄下，Git 保持全乾淨狀態 (by .gitignore)。
+本專案編譯輸出皆已標準化至 `out_*/`（暫存）與 `bin_*/`（成品）目錄下，Git 保持全乾淨狀態 (by .gitignore)。
 
 - 可 run task 來清除輸出用的目錄與內容。
 
-    ```
-    haxe util_clean_out
+    ```bash
+    $ haxe util_clean_out
     ```
 
 -----
 
 ### 新增子測試模組時要做的事
 
-- 需要將 settings.json (workspace版) 內的
+- 需要將 `settings.json` (workspace版) 內的
 
-    ```
+    ```text
     "haxe.configurations": [ ]
     ```
     
-- 根據實際需求加入新的 xbuild/*.hxml
+- 根據實際需求加入新的 xbuild/\*.hxml
 
+    ```text
+    ["xbuild/Lab01_workflow_hlc.hxml"],
+    ["xbuild/Lab01_workflow_cpp.hxml"],
+    ["xbuild/Lab01_workflow_interp.hxml"]
     ```
-        ["xbuild/Lab01_workflow_hlc.hxml"],
-        ["xbuild/Lab01_workflow_cpp.hxml"],
-        ["xbuild/Lab01_workflow_interp.hxml"]
-    ```
 
-xbuild 子資料夾目的為將子模組的 hxml 集中。 但是基本還是會引用根目錄下的 base.hxml 來作為 -cp 依據。
+`xbuild` 子資料夾目的為將子模組的 `hxml` 集中。 但是基本還是會引用根目錄下的 `base.hxml` 來作為 `-cp` 依據。
 
-- 因為是前端 hxml 叫用根目錄下的 makefile，所以 cwd 之類會改變工作目錄的手段要小心使用。
+- 因為是前端 `hxml` 叫用根目錄下的 `Makefile`，所以 `cwd` 之類會改變工作目錄的手段要小心使用。
 
-- 這樣 vs code 左下角選取 *.hxml，或是 CMD+Shift+P 後 "Haxe: Select Configuration" 才有得選 /xbuild 下的 *.hxml。
+- 這樣 vs code 左下角選取 `\*.hxml`，或是 `CMD+Shift+P` 後 `"Haxe: Select Configuration"` 才有得選 `/xbuild` 下的 `\*.hxml`。
 
-    - 好處是 ws 頂層東西少。 但是新增一個主題的子專案時，都要手動去修 settings.json (ws版)。
+    - 好處是 ws 頂層東西少。 但是新增一個主題的子專案時，都要手動去修 `settings.json` (ws版)。
 
-    - 懶得處理了，畢竟是要寫 Haxe 不是來搞**組態設定**。 走火入魔只會召喚出**藍色貨櫃鯨魚**之類的鬼東西。
+    - 懶得處理了，畢竟是要寫 ***Haxe*** 不是來搞**組態設定**。 走火入魔只會召喚出**藍色貨櫃鯨魚**之類的鬼東西。
+    
+<br>
+
+-----
+
+### 目前的 vs code 常用快速鍵：
+
+- <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
+
+    顯示**指令**，各式各樣奇妙的事情。 選擇config (\*.hxml)，或是左下角點選。
+    
+    - <kbd>Cmd</kbd> + <kbd>P</kbd> 是顯示**檔案**。
+
+<br>
+
+- <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>
+
+    根據當前 \*.hxml 執行 task。 (轉譯-編譯-執行)
+
+<br>
+
+- <kbd>Cmd</kbd> + <kbd>,</kbd>
+
+    改設定。 右上有 `Open Settings` 可以切到 `settings.json` 來改。
+
+<br>
+
+- <kbd>Cmd</kbd> + <kbd>J</kbd> 
+
+    開/關 終端機。
+
+<br>
+
+- <kbd>Cmd</kbd> + <kbd>K</kbd>
+
+    `$ clear` 只是往上捲。 這個才會清空終端內容。
+
+<br> 
+
+- <kbd>Opt</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>
+
+    排版格式套用。 可以去設定把 `Format on [時機]` 那一群打勾來觸發啟用時機，左手就不會打結了。
+
+    \* 左下齒輪 Snippets 的 `haxe.json` 需要有東西(format)可以貼。
+
+<br>

@@ -5,8 +5,8 @@
 #
 
 # 針對 haxelib.Hashlink(C 模式) 與 hxcpp(C++ 模式) 與 Haxe 直譯(Interpreter)的建置引擎
-# > 針對 haxelib.Hashlink 轉譯的 .c，再透過 clang 編譯，加上 Homebrew.Hashlink 連結出執行檔。
-# > hxcpp 自己會搞定，直接輸出執行檔。這裡只有搬檔案。
+# > 針對 haxe + haxelib.Hashlink 轉譯的 .c，再透過 clang 編譯，加上 Homebrew.Hashlink 連結出執行檔。
+# > haxe 轉譯的 .cpp，hxcpp 自己會(找 clang)搞定，直接輸出執行檔。故這裡只有資料夾間移動執行檔。
 #
 # 中繼檔目錄 /out_<目標種類>，會根據子專案開子資料夾。 (就是out_*/下會有資料夾)
 # > 子專案生成的中繼檔會放進 /out_hlc/<LabMainName>/，不會大家混在一起。
@@ -16,6 +16,9 @@
 #
 # 之後可以執行 (附CLI參數)。
 
+
+
+.PHONY: run_hlc run_cpp run_js run_interp clean
 
 # 預設變數（未傳入時有預設值）
 NAME ?= Main
@@ -32,16 +35,16 @@ else
     FULL_MAIN = $(strip $(PKG_PATH)).$(NAME)
 endif
 
-# 使用 which 檢查 node 是否存在
+# 使用 which 檢查 node (Node.js) 是否存在
 NODE_CHECK := $(shell which node 2>/dev/null)
 
 
-# 根據種類決定執行檔後方贅詞
+# 根據種類決定執行檔名後方贅詞
 POST_HLC = _hlc
 POST_CPP = _cpp
 
 
-# 1. HLC (C 語言) 編譯與連結用的參數
+# 1. HLC (C 語言) 編譯與連結用的參數 (針對apple silicon)
 BIN_HLC = bin_hlc
 OUT_SUB_HLC = out_hlc/$(NAME)
 EXE_HLC = $(NAME)$(POST_HLC)
@@ -76,7 +79,7 @@ run_hlc:
 # Haxe 本身會把執行檔(與<LabMainName>同名)吐在 out_cpp/<LabMainName>/ 裡，我們把它搬移到 bin_cpp/ 並加上後綴_cpp，進行統一歸類
 run_cpp:
 	mkdir -p $(BIN_CPP)
-	mv $(OUT_SUB_CPP)/$(NAME) $(BIN_CPP)/$(EXE_CPP)
+	mv -f $(OUT_SUB_CPP)/$(NAME) $(BIN_CPP)/$(EXE_CPP)
 	$(BIN_CPP)/$(EXE_CPP) $(ARGS)
 
 
@@ -101,7 +104,7 @@ endif
 # Y. 記憶體直譯模式 (Interpreter) Task
 # ----------------------------------------------------
 # 直譯時會依賴於 base.hxml 來取得如 src 等基本設定。
-# 需要 package 路徑。
+# 需要 package 路徑組合出的 FULL_MAIN。
 run_interp:
 	haxe base.hxml -main $(FULL_MAIN) --run $(FULL_MAIN) $(ARGS)
 
