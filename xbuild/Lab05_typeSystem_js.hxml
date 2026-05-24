@@ -1,0 +1,6 @@
+base.hxml
+-main idv.rs.reiko93.lab.typeSystem.HaxeTypeSystemExp
+-js bin_js/HaxeTypeSystemExp.js
+-lib hxnodejs
+
+--cmd make run_js NAME=HaxeTypeSystemExp ARGS="123 456"

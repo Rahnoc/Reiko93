@@ -1,0 +1,3 @@
+# 雖然用不到，為了讓檔案生成時能判斷套件路徑，至少要有 -cp src。 這裡為了一致，引入base.hxml。
+base.hxml
+--cmd make run_interp NAME=HaxeDynaExp PKG_PATH="idv.rs.reiko93.lab.hxDyna" ARGS="interp reter"
