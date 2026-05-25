@@ -21,6 +21,11 @@
         ["xbuild/Lab05_typeSystem_interp.hxml"],
         ["xbuild/Lab05_typeSystem_js.hxml"],
         ["xbuild/Lab05_typeSystem_hlc.hxml"],
-        ["xbuild/Lab05_typeSystem_cpp.hxml"]
+        ["xbuild/Lab05_typeSystem_cpp.hxml"],
+        // 06
+        ["xbuild/Lab06_num_interp.hxml"],
+        ["xbuild/Lab06_num_js.hxml"],
+        ["xbuild/Lab06_num_hlc.hxml"],
+        ["xbuild/Lab06_num_cpp.hxml"]
     ]
 }

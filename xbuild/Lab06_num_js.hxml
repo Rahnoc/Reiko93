@@ -1,0 +1,6 @@
+base.hxml
+-main idv.rs.reiko93.lab.num.HaxeNumExp
+-js bin_js/HaxeNumExp.js
+-lib hxnodejs
+
+--cmd make run_js NAME=HaxeNumExp ARGS="123 456"
