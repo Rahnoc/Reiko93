@@ -26,6 +26,11 @@
         ["xbuild/Lab06_num_interp.hxml"],
         ["xbuild/Lab06_num_js.hxml"],
         ["xbuild/Lab06_num_hlc.hxml"],
-        ["xbuild/Lab06_num_cpp.hxml"]
+        ["xbuild/Lab06_num_cpp.hxml"],
+        // 07
+        ["xbuild/Lab07_scope_interp.hxml"],
+        ["xbuild/Lab07_scope_js.hxml"],
+        ["xbuild/Lab07_scope_hlc.hxml"],
+        ["xbuild/Lab07_scope_cpp.hxml"]
     ]
 }

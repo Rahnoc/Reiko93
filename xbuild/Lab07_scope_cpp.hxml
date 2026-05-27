@@ -1,0 +1,7 @@
+base.hxml
+-main idv.rs.reiko93.lab.scope.HaxeScopeExp
+# Haxe 的 -cpp 參數只需要指定一個輸出資料夾，它會在裡面自己全自動打包出執行檔
+-cpp out_cpp/HaxeScopeExp
+
+# 💡 呼叫 Makefile 裡的 run_cpp 任務，進行搬移與帶參數執行
+--cmd make run_cpp NAME=HaxeScopeExp ARGS="123 456"

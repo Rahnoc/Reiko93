@@ -1,0 +1,6 @@
+base.hxml
+-main idv.rs.reiko93.lab.scope.HaxeScopeExp
+-hl out_hlc/HaxeNumExp/main.c
+
+# 轉譯完後，直接呼叫 Makefile 裡的 run task
+--cmd make run_hlc NAME=HaxeScopeExp ARGS="123 456"
