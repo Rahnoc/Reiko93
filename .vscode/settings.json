@@ -32,5 +32,10 @@
         ["xbuild/Lab07_scope_js.hxml"],
         ["xbuild/Lab07_scope_hlc.hxml"],
         ["xbuild/Lab07_scope_cpp.hxml"]
+        // 08
+        ["xbuild/Lab08_ds_interp.hxml"],
+        ["xbuild/Lab08_ds_js.hxml"],
+        ["xbuild/Lab08_ds_hlc.hxml"],
+        ["xbuild/Lab08_ds_cpp.hxml"]
     ]
 }

@@ -1,0 +1,6 @@
+base.hxml
+-main idv.rs.reiko93.lab.ds.HaxeDsExp
+-js bin_js/HaxeDsExp.js
+-lib hxnodejs
+
+--cmd make run_js NAME=HaxeDsExp ARGS="123 456"
