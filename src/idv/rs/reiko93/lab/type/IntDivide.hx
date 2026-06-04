@@ -1,19 +1,19 @@
+/**
+	IntDivide.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/20.
+**/
+
 package idv.rs.reiko93.lab.type;
 
 import haxe.Int32;
 
-///
-/// IntDivide.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/20.
-///
-
 /**
- * 整數相除測試。
- * 不是變 2 喔，全面變成 2.5f，跟 AS3 一樣。
- * 
- */
+	整數相除測試。
+
+	不是變 2 喔，全面變成 2.5f，跟 AS3 一樣。
+**/
 class IntDivide {
 	public function new() {}
 
@@ -25,7 +25,7 @@ class IntDivide {
 		haxeToolDiv();
 	}
 
-	/// 整數相除
+	// 整數相除
 	function primDiv() {
 		var a: Int = 5;
 		var b: Int = 2;

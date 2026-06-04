@@ -1,16 +1,17 @@
+/**
+	HaxeTypeExp.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/20.
+**/
+
 package idv.rs.reiko93.lab.type;
 
-///
-/// HaxeTypeExp.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/20.
-///
-
 /**
- * Basic types experiment.
- * ::測試進入點
- */
+	Basic types experiment.
+
+	::測試進入點
+**/
 class HaxeTypeExp {
 	/**
 	 * Entry point.

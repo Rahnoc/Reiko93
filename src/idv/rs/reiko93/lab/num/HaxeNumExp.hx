@@ -1,8 +1,8 @@
 package idv.rs.reiko93.lab.num;
 
 /**
- * Number exp.
- */
+	Number exp.
+**/
 class HaxeNumExp {
 	static public function main() {
 		run();

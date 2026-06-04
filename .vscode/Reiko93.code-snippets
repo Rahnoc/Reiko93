@@ -1,0 +1,103 @@
+{
+	// Place your Reiko93 workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	//
+	// You can also restrict snippets to specific files using include/exclude patterns:
+	// "Test snippet": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "test",
+	// 	"body": "test('$1', () => {\n\t$0\n});",
+	// 	"include": ["**/*.test.ts", "*.spec.ts"],
+	// 	"exclude": ["**/temp/*.ts"],
+	// 	"description": "Insert test block"
+	// }
+	
+	// ${TM_FILENAME_BASE}
+    // 新黨自動會補package path，下面用不到 (而且是/分割的)。
+    // "package ${TM_DIRECTORY/^.*[\\\\\\/](src|source)[\\\\\\/]?//};",
+    // "package ${TM_DIRECTORY/^.*src\\/?(.*)$/$1/};",
+    
+    
+    
+    "Haxe Doc Header Only": {
+        "prefix": "hxheader",
+        "body": [
+            "/**",
+            "\t${TM_FILENAME}",
+            "\t${1:Reiko93'}",
+            "\t",
+            "\tCreated by Rahnoc on ${CURRENT_YEAR}/${CURRENT_MONTH}/${CURRENT_DATE}.",
+            "**/",
+            "$0"
+        ],
+        "description": "生成頂部標頭"
+    },
+    
+    
+    "Haxe Class Doc Template": {
+        "prefix": "hxclass",
+        "body": [
+            "/**",
+            "\t${1:類別的核心功能與用途描述。}",
+            "**/",
+            "class ${TM_FILENAME_BASE} {",
+            "",
+            "\tpublic function new() {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ],
+        "description": "生成 Class 類別功能說明註解"
+    },
+    
+    
+    "Haxe Method Doc Template": {
+        "prefix": "hxmethod",
+        "body": [
+            "/**",
+            " * ${1:此函式的功能簡述。}",
+            " * ",
+            " * @param ${2:paramName} ${3:參數的用途描述}",
+            " * @return ${4:回傳值的類型與意義}",
+            " * @throws ${5:String} ${6:在什麼情況下會拋出異常}",
+            " */"
+        ],
+        "description": "生成帶有參數、回傳、異常標籤的函式文件註解"
+    },
+    
+    
+    "Haxe Doc Raw Style": {
+        "prefix": "hxdocr",
+        "body": [
+            "/**",
+            "\t$0",
+            "**/"
+        ],
+        "description": "Class/Interface 多行註解(換行不補星號)"
+    },
+    
+    
+    "Haxe Doc Star Style": {
+        "prefix": "hxdocs",
+        "body": [
+            "/**",
+            " * $0",
+            " */"
+        ],
+        "description": "Method 多行註解(換行帶星號)"
+    }
+}

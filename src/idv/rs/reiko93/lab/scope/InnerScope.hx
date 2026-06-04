@@ -1,15 +1,15 @@
+/**
+	InnerScope.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/27.
+**/
+
 package idv.rs.reiko93.lab.scope;
 
-///
-/// InnerScope.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/27.
-///
-
 /**
- * 屏蔽測試
- */
+	屏蔽測試
+**/
 class InnerScope {
 	var _a: Int = 0;
 	var _b: Int = 0;
@@ -38,7 +38,7 @@ class InnerScope {
 
 	public function new() {}
 
-	/// a 被覆蓋，b 沒被影響。
+	// a 被覆蓋，b 沒被影響。
 	public function test(a: Int) {
 		this._a = a;
 		this._b = b;

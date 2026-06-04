@@ -1,17 +1,19 @@
+/**
+	HaxeClassExp.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/20.
+**/
+
 package idv.rs.reiko93.lab.hxClass;
 
-///
-/// HaxeClassExp.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/20.
-///
 import idv.rs.reiko93.lab.hxClass.pkg.*;
 
 /**
- * 類別初始實驗
- * ::測試進入點
- */
+	類別初始實驗
+
+	::測試進入點
+**/
 class HaxeClassExp {
 	public static function main() {
 		Sys.println("hello");

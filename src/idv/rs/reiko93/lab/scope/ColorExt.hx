@@ -1,8 +1,8 @@
 package idv.rs.reiko93.lab.scope;
 
 /**
- * ARGB color type based on a 32-bit integer.
- */
+	ARGB color type based on a 32-bit integer.
+**/
 abstract Color(Int) from Int to Int {
 	/**
 	 * Predefined color constants for common colors.

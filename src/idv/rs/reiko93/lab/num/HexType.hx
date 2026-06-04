@@ -3,8 +3,8 @@ package idv.rs.reiko93.lab.num;
 using idv.rs.reiko93.lab.num.TypeInfoTools;
 
 /**
- * Hexidecimal 與 邊境測試
- */
+	Hexidecimal 與 邊境測試
+**/
 class HexType {
 	public function new() {}
 

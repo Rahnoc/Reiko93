@@ -1,14 +1,14 @@
+/**
+	Maybe.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/28.
+**/
+
 package idv.rs.reiko93.lab.ds;
 
-///
-/// Maybe.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/28.
-///
-
 /**
- * Null safety.
+	Null safety.
  */
 abstract Maybe<T>(Null<T>) from Null<T> to Null<T> {
 	public inline function isNotNull(): Bool {

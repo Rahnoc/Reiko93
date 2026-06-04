@@ -3,8 +3,8 @@ package idv.rs.reiko93.lab.ds;
 using idv.rs.reiko93.lab.ds.ReverseArrayKeyValueIterator;
 
 /**
- * Rev Arr.
- */
+	Rev Arr.
+**/
 class ReverseArrayKeyValueIterator<T> {
 	final arr: Array<T>;
 	var i: Int;

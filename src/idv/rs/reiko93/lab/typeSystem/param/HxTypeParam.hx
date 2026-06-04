@@ -1,8 +1,8 @@
 package idv.rs.reiko93.lab.typeSystem.param;
 
 /**
- * <T> 對於同 type 參數的編譯期限制測試。
- */
+	<T> 對於同 type 參數的編譯期限制測試。
+**/
 class HxTypeParam {
 	public function new() {}
 

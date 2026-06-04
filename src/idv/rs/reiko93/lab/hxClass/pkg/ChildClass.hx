@@ -1,15 +1,15 @@
+/**
+	ChildClass.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/21.
+**/
+
 package idv.rs.reiko93.lab.hxClass.pkg;
 
-///
-/// ChildClass.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/21.
-///
-
 /**
- * 子類別
- */
+	子類別
+**/
 class ChildClass extends ParentClass {
 	var money: Int;
 	var dataSize: Int;

@@ -1,17 +1,17 @@
+/**
+	HaxeScopeExp.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/27.
+**/
+
 package idv.rs.reiko93.lab.scope;
 
 import idv.rs.reiko93.lab.scope.ColorExt.Color;
 
-///
-/// HaxeScopeExp.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/27.
-///
-
 /**
- * Scope exp.
- */
+	Scope exp.
+**/
 class HaxeScopeExp {
 	public static function main() {
 		run();

@@ -1,19 +1,19 @@
-package idv.rs.reiko93.lab.typeSystem.param;
+/**
+	HxTypeConstrain.hx
+	Reiko93'
 
-///
-/// HxTypeConstrain.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/24.
-///
+	Created by Rahnoc on 2026/05/24.
+**/
+
+package idv.rs.reiko93.lab.typeSystem.param;
 
 typedef Measurable = {
 	public var length(default, null): Int;
 }
 
 /**
- * Type constrain test.
- */
+	Type constrain test.
+**/
 class HxTypeConstrain {
 	public function new() {}
 

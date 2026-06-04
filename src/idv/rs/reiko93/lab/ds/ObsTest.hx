@@ -3,9 +3,10 @@ package idv.rs.reiko93.lab.ds;
 using idv.rs.reiko93.lab.ds.Observables;
 
 /**
- * 測試 observer 與 observables。
- * 可被觀測的物體，能註冊多位觀測者。
- */
+	測試 observer 與 observables。
+
+	可被觀測的物體，能註冊多位觀測者。
+**/
 class ObsTest {
 	public function new() {}
 

@@ -1,8 +1,8 @@
 package idv.rs.reiko93.lab.typeSystem.param;
 
 /**
- * Generic class.
- */
+	Generic class.
+**/
 class HxGenericClass {
 	public function new() {}
 

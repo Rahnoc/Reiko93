@@ -1,17 +1,17 @@
+/**
+	HaxeVsWorkflowExp.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/20.
+**/
+
 package idv.rs.reiko93.lab.workflow;
 
-///
-/// HaxeVsWorkflowExp.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/20.
-///
-
 /**
- * 針對 VS Code 建立 Haxe 專案環境初期，建制的 hxml 與 Makefile 等相關工具，
- * 
- * ::測試進入點
- */
+	針對 VS Code 建立 Haxe 專案環境初期，建制的 hxml 與 Makefile 等相關工具，
+
+	::測試進入點
+**/
 class HaxeVsWorkflowExp {
 	/**
 	 * 進入點，列印訊息。 並測試參數取得。

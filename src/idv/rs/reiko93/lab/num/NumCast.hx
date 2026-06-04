@@ -3,8 +3,8 @@ package idv.rs.reiko93.lab.num;
 using idv.rs.reiko93.lab.num.TypeInfoTools;
 
 /**
- * int float 轉型測試
- */
+	int float 轉型測試
+**/
 class NumCast {
 	public function new() {}
 

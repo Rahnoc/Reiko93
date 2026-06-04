@@ -1,8 +1,8 @@
 package idv.rs.reiko93.lab.hxDyna;
 
 /**
- * 針對 Any 判斷與轉型
- */
+	針對 Any 判斷與轉型
+**/
 class HaxeDynaExp {
 	static function setAnyValue(value: Any) {
 		trace(value);

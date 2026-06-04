@@ -1,15 +1,15 @@
+/**
+	HaxeDsExp.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/27.
+**/
+
 package idv.rs.reiko93.lab.ds;
 
-///
-/// HaxeDsExp.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/27.
-///
-
 /**
- * DS exp.
- */
+	DS exp.
+**/
 class HaxeDsExp {
 	public static function main() {
 		run();

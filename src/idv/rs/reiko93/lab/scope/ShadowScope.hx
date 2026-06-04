@@ -1,15 +1,15 @@
+/**
+	ShadowScope.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/27.
+**/
+
 package idv.rs.reiko93.lab.scope;
 
-///
-/// ShadowScope.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/27.
-///
-
 /**
- * 局部遮蔽測試
- */
+	局部遮蔽測試
+**/
 class ShadowScope {
 	private var r: Int;
 	private var g: Int;
@@ -40,7 +40,7 @@ class ShadowScope {
 		return new ShadowScope(r, g, b, a);
 	}
 
-	/// ---------------
+	// ---------------
 	public var ri(get, set): Int;
 
 	inline function get_ri()

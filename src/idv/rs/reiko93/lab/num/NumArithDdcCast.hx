@@ -3,8 +3,8 @@ package idv.rs.reiko93.lab.num;
 using idv.rs.reiko93.lab.num.TypeInfoTools;
 
 /**
- * 自動推導轉型測試。
- */
+	自動推導轉型測試。
+**/
 class NumArithDdcCast {
 	public function new() {}
 

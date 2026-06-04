@@ -3,7 +3,7 @@ package idv.rs.reiko93.lab.ds;
 import idv.rs.reiko93.lab.ds.Maybe;
 
 /**
- * 測試 nil處理用的 Maybe 類別。
+	測試 nil處理用的 Maybe 類別。
  */
 class MaybeTest {
 	public function new() {}

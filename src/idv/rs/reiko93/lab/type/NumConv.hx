@@ -1,24 +1,26 @@
+/**
+	NumConv.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/20.
+**/
+
 package idv.rs.reiko93.lab.type;
 
 import haxe.Int32;
 
-///
-/// NumConv.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/20.
-///
-
 /**
- * Int 32 與 Float (靜態 32 動態 64) 的轉換與溢位測試。
- * 
- * C/C++ static = 32bit
- * JavaScript = 64bit
- * 
- * 以 直譯與 JS 為輸出目標來比較。
- * 直譯時，正好溢位變負數。
- * JS
- */
+	Int 32 與 Float (靜態 32 動態 64) 的轉換與溢位測試。
+
+	C/C++ static = 32bit
+
+	JavaScript = 64bit
+
+	以 直譯與 JS 為輸出目標來比較。
+	直譯時，正好溢位變負數。
+
+	JS
+**/
 class NumConv {
 	public function new() {}
 

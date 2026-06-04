@@ -8,6 +8,6 @@
     },
     "indentation": {
         "character": "\t",
-        "count": 1
+        "tabWidth": 4
     }
 }

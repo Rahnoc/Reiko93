@@ -1,15 +1,15 @@
+/**
+	ParentClass.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/21.
+**/
+
 package idv.rs.reiko93.lab.hxClass.pkg;
 
-///
-/// ParentClass.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/21.
-///
-
 /**
- * 父類別
- */
+	父類別
+**/
 class ParentClass {
 	var name: String;
 

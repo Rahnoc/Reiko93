@@ -1,13 +1,13 @@
-///
-/// Main.hx
-/// Reiko93'
-///
-/// Created by Rahnoc on 2026/05/20.
-///
+/**
+	Main.hx
+	Reiko93'
+
+	Created by Rahnoc on 2026/05/20.
+**/
 
 /**
- * Default auto-gen'ed file.
- */
+	Default auto-gen'ed file.
+**/
 class Main {
 	/**
 	 * Main entry.

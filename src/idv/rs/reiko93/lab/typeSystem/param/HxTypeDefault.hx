@@ -1,8 +1,8 @@
 package idv.rs.reiko93.lab.typeSystem.param;
 
 /**
- * Type with defaults.
- */
+	Type with defaults.
+**/
 class HxTypeDefault {
 	public function new() {}
 
