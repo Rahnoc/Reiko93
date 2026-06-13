@@ -134,6 +134,8 @@ class EnumCompareTest {
 		testAbstEnum();
 		trace('==== testAbsPri =====');
 		testAbsPri();
+		trace('==== testMultiMatch =====');
+		testMultiMatch();
 	}
 
 	// -----------------
@@ -202,6 +204,23 @@ class EnumCompareTest {
 					// 會被覆蓋，編譯期錯誤。
 					// case AnotherTwo:
 					// 	trace('AnotherTwo $nObj');
+			}
+		}
+	}
+
+	private function testMultiMatch() {
+		var arr: Array<Int> = [1, 2, 3, 4, 5, 67, 8];
+		for (v in arr) {
+			switch (v) {
+				// Haxe 2 寫法， `,` 可用，但是沒版法 capture。
+				case 1, 2, 3:
+					trace('matched-A: $v');
+				// Haxe 3 後的 寫法，`|` 解決 capture 問題。
+				case cap = 4 | 5 | 8:
+					trace('matched-B: $cap');
+				// 也是可以寫 default: 啦。
+				case _:
+					trace('others $v');
 			}
 		}
 	}
