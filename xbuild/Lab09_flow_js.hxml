@@ -1,0 +1,6 @@
+base.hxml
+-main idv.rs.reiko93.lab.flow.HaxeFlowExp
+-js bin_js/HaxeFlowExp.js
+-lib hxnodejs
+
+--cmd make run_js NAME=HaxeFlowExp ARGS="123 456"

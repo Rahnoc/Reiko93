@@ -1,0 +1,6 @@
+base.hxml
+-main idv.rs.reiko93.lab.flow.HaxeFlowExp
+-hl out_hlc/HaxeFlowExp/main.c
+
+# 轉譯完後，直接呼叫 Makefile 裡的 run task
+--cmd make run_hlc NAME=HaxeFlowExp ARGS="123 456"
