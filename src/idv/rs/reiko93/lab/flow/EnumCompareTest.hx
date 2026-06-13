@@ -212,7 +212,7 @@ class EnumCompareTest {
 		var arr: Array<Int> = [1, 2, 3, 4, 5, 67, 8];
 		for (v in arr) {
 			switch (v) {
-				// Haxe 2 寫法， `,` 可用，但是沒版法 capture。
+				// Haxe 2 寫法， `,` 可用，但是沒辦法 capture。
 				case 1, 2, 3:
 					trace('matched-A: $v');
 				// Haxe 3 後的 寫法，`|` 解決 capture 問題。
