@@ -6,6 +6,8 @@ class HaxeFlowExp {
 	}
 
 	static function run() {
-		new EnumCompareTest().run();
+		// new EnumCompareTest().run();
+
+		new EnumAsoTest().run();
 	}
 }
